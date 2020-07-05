@@ -51,8 +51,8 @@ namespace QuartzHostedServices
 
             public void Dispose()
             {
-                _scope.Dispose();
                 (_innerJob as IDisposable)?.Dispose();
+                _scope.Dispose();
             }
         }
     }
